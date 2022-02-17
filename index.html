@@ -10,8 +10,8 @@
 
     <div id="app">
 
-        <ul>
-            <li>{{email}}</li>
+        <ul v-for="mail in arrayEmail">
+            <li v-if="arrayEmail.length = 10">{{mail}}</li>
         </ul>
 
     </div>
