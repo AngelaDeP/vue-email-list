@@ -8,12 +8,14 @@ const app = new Vue(
 
         mounted() {
             
-            this.email = '',
-            this.arrayEmail = new Array(10);
+            this.email = '';
+            this.arrayEmail.length = 10;
             console.log(this.arrayEmail);
+            
 
             for (let i = 0; i < this.arrayEmail.length; i++) {
 
+                
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((response) => {
                     this.email = response.data.response;
