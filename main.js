@@ -7,13 +7,10 @@ const app = new Vue(
         },
 
         mounted() {
-            
-            this.email = '';
-            this.arrayEmail.length = 10;
-            console.log(this.arrayEmail);
-            
 
-            for (let i = 0; i < this.arrayEmail.length; i++) {
+            this.email = '';
+            
+            for (let i = 0; i < 10; i++) {
 
                 
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
@@ -22,8 +19,9 @@ const app = new Vue(
                     console.log(this.email);
 
                     this.arrayEmail.push(this.email);
+                    console.log(this.arrayEmail);
                 });
-                
+
             }
 
         },
